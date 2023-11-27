@@ -1,0 +1,65 @@
+.marq_box{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin: 0 2rem;
+    border: 2px solid rgba(169, 100, 145, 0.671);
+    background-color: rgba(137, 43, 226, 0.299);
+    padding: .4rem;
+}
+.marq_box img{
+    width: 100%;
+    border-radius: 50%;
+}
+.Text_box {
+    transform: scale(.5);
+    transition: .3s ease-in;
+    position: absolute;
+    left: 10%;
+    top: 3.5rem;
+    opacity: 0;
+    visibility: hidden;
+}
+.name {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+  padding: .5rem;
+  background: rgb(254, 148, 254);
+  border-radius: .5rem;
+color: rgb(83, 0, 128);
+  position: absolute;
+  border: 2px solid purple;
+}
+
+.name::before {
+    content: '';
+    width: .7rem;
+    height: .7rem;
+    position: absolute;
+    background: rgb(254, 148, 254);
+    bottom: -7px;
+    right: 13px;
+    border: 2px solid purple;
+    transform: rotate(45deg);
+    border-left: transparent;
+    border-top: transparent;
+}
+    .rfm-child{
+        padding: 4rem 0;
+    }
+.rfm-child:hover .name{
+  visibility: visible;
+  opacity: 1;
+}
+.rfm-child:hover .Text_box{
+ transform: scale(1);
+ top: -3.5rem;
+ opacity: 1;
+ visibility: visible;
+}

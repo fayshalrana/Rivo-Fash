@@ -1,0 +1,6 @@
+.slick-slide > div{
+    margin: 40px 10px;
+}
+.slick-dots {
+    bottom: 80px;
+}

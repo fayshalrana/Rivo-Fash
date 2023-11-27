@@ -1,0 +1,19 @@
+.active{
+    border-bottom: 2px solid rgb(250, 86, 86);
+}
+.nav-item{
+   transition: .3s ease-out all;
+}
+.cart_number {
+    height: 1.4rem;
+    width: 1.4rem;
+    background: rgba(128, 0, 128, 0.496);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: .8rem;
+    right: 0rem;
+    top: -.4rem;
+}

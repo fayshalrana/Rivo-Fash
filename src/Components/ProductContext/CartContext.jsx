@@ -7,14 +7,13 @@ export const addToCartContext = createContext();
 const CartContext = ({ children }) => {
     //Get localStor Data
     const localStorData = () => {
-        let newCartData = localStorage.getItem('ShoppingCart')
-        if (newCartData == []) {
-            return []
-        }
-        else {
+        let newCartData = localStorage.getItem('ShoppingCart');
+        if (!newCartData || newCartData.length === 0) {
+            return [];
+        } else {
             return JSON.parse(newCartData);
         }
-    }
+    };
     const initialState = {
         // cart : [], 
         cart: localStorData(),
@@ -39,6 +38,7 @@ const CartContext = ({ children }) => {
         dispatch({type:"TOTAL_CART_ITEM"})
         // get total price of item 
         dispatch({type:"TOTAL_PRICE_OF_ITEMS"})
+        
         localStorage.setItem("ShoppingCart", JSON.stringify(state.cart))
     }, [state.cart])
 
